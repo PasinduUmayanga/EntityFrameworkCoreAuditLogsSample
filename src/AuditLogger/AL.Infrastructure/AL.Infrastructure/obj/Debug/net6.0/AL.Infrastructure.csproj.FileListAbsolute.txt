@@ -1,0 +1,14 @@
+E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Infrastructure\AL.Infrastructure\bin\Debug\net6.0\AL.Infrastructure.deps.json
+E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Infrastructure\AL.Infrastructure\bin\Debug\net6.0\AL.Infrastructure.runtimeconfig.json
+E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Infrastructure\AL.Infrastructure\bin\Debug\net6.0\AL.Infrastructure.dll
+E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Infrastructure\AL.Infrastructure\bin\Debug\net6.0\AL.Infrastructure.pdb
+E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Infrastructure\AL.Infrastructure\obj\Debug\net6.0\AL.Infrastructure.csproj.AssemblyReference.cache
+E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Infrastructure\AL.Infrastructure\obj\Debug\net6.0\AL.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Infrastructure\AL.Infrastructure\obj\Debug\net6.0\AL.Infrastructure.AssemblyInfoInputs.cache
+E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Infrastructure\AL.Infrastructure\obj\Debug\net6.0\AL.Infrastructure.AssemblyInfo.cs
+E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Infrastructure\AL.Infrastructure\obj\Debug\net6.0\AL.Infrastructure.csproj.CoreCompileInputs.cache
+E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Infrastructure\AL.Infrastructure\obj\Debug\net6.0\AL.Infrastructure.dll
+E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Infrastructure\AL.Infrastructure\obj\Debug\net6.0\refint\AL.Infrastructure.dll
+E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Infrastructure\AL.Infrastructure\obj\Debug\net6.0\AL.Infrastructure.pdb
+E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Infrastructure\AL.Infrastructure\obj\Debug\net6.0\AL.Infrastructure.genruntimeconfig.cache
+E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Infrastructure\AL.Infrastructure\obj\Debug\net6.0\ref\AL.Infrastructure.dll
