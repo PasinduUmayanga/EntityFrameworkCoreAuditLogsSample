@@ -101,39 +101,46 @@ namespace AL.Infrastructure.Audit
                         switch (entry.State)
                         {
                             case EntityState.Added:
-                                trailEntry.TrailType = (int)EnumAuditTrailType.Create;
-                                trailEntry.NewValues[propertyName] = property.CurrentValue;
-                                break;
+                                {
+                                    trailEntry.TrailType = (int)EnumAuditTrailType.Create;
+                                    trailEntry.NewValues[propertyName] = property.CurrentValue;
+                                    break;
+                                }
 
                             case EntityState.Deleted:
-                                trailEntry.TrailType = (int)EnumAuditTrailType.Delete;
-                                trailEntry.OldValues[propertyName] = property.OriginalValue;
-                                break;
+                                {
+                                    trailEntry.TrailType = (int)EnumAuditTrailType.Delete;
+                                    trailEntry.OldValues[propertyName] = property.OriginalValue;
+                                    break;
+                                }
 
                             case EntityState.Modified:
-                                if (property.IsModified && property.OriginalValue == null && property.CurrentValue != null)
                                 {
-                                    //trailEntry.ChangedColumns.Add(propertyName);
-                                    //trailEntry.TrailType = (int)EnumAuditTrailType.Delete;
-                                    //trailEntry.OldValues[propertyName] = property.OriginalValue;
-                                    //trailEntry.NewValues[propertyName] = property.CurrentValue;
-                                }
-                                else if (property.IsModified && property.OriginalValue?.Equals(property.CurrentValue) == false)
-                                {
-                                    trailEntry.ChangedColumns.Add(propertyName);
-                                    trailEntry.TrailType = (int)EnumAuditTrailType.Update;
-                                    trailEntry.OldValues[propertyName] = property.OriginalValue;
-                                    trailEntry.NewValues[propertyName] = property.CurrentValue;
-                                }
+                                    if (property.IsModified && property.OriginalValue == null && property.CurrentValue != null)
+                                    {
+                                        //trailEntry.ChangedColumns.Add(propertyName);
+                                        //trailEntry.TrailType = (int)EnumAuditTrailType.Delete;
+                                        //trailEntry.OldValues[propertyName] = property.OriginalValue;
+                                        //trailEntry.NewValues[propertyName] = property.CurrentValue;
+                                    }
+                                    else if (property.IsModified && property.OriginalValue?.Equals(property.CurrentValue) == false)
+                                    {
+                                        trailEntry.ChangedColumns.Add(propertyName);
+                                        trailEntry.TrailType = (int)EnumAuditTrailType.Update;
+                                        trailEntry.OldValues[propertyName] = property.OriginalValue;
+                                        trailEntry.NewValues[propertyName] = property.CurrentValue;
+                                    }
 
-                                break;
+                                    break;
+                                }
                         }
                     }
 
-                    foreach (var auditEntry in trailEntries.Where(e => !e.HasTemporaryProperties))
-                    {
-                        dbContext.AuditTrails.Add(auditEntry.ToAuditTrail());
-                    }
+
+                }
+                foreach (var auditEntry in trailEntries.Where(e => !e.HasTemporaryProperties))
+                {
+                    dbContext.AuditTrails.Add(auditEntry.ToAuditTrail());
                 }
 
                 return trailEntries.Where(e => e.HasTemporaryProperties).ToList();
