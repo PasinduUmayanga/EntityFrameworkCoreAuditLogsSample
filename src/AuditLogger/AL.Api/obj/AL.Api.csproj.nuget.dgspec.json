@@ -28,6 +28,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "E:\\Projects\\GitHub Projects\\EntityFrameworkCoreAuditLogsSample\\src\\AuditLogger\\AL.Application\\AL.Application\\AL.Application.csproj": {
+                "projectPath": "E:\\Projects\\GitHub Projects\\EntityFrameworkCoreAuditLogsSample\\src\\AuditLogger\\AL.Application\\AL.Application\\AL.Application.csproj"
+              },
               "E:\\Projects\\GitHub Projects\\EntityFrameworkCoreAuditLogsSample\\src\\AuditLogger\\AL.Infrastructure\\AL.Infrastructure\\AL.Infrastructure.csproj": {
                 "projectPath": "E:\\Projects\\GitHub Projects\\EntityFrameworkCoreAuditLogsSample\\src\\AuditLogger\\AL.Infrastructure\\AL.Infrastructure\\AL.Infrastructure.csproj"
               }
@@ -49,6 +52,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.16, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
@@ -66,6 +73,75 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.105\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Projects\\GitHub Projects\\EntityFrameworkCoreAuditLogsSample\\src\\AuditLogger\\AL.Application\\AL.Application\\AL.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Projects\\GitHub Projects\\EntityFrameworkCoreAuditLogsSample\\src\\AuditLogger\\AL.Application\\AL.Application\\AL.Application.csproj",
+        "projectName": "AL.Application",
+        "projectPath": "E:\\Projects\\GitHub Projects\\EntityFrameworkCoreAuditLogsSample\\src\\AuditLogger\\AL.Application\\AL.Application\\AL.Application.csproj",
+        "packagesPath": "C:\\Users\\pasin\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\GitHub Projects\\EntityFrameworkCoreAuditLogsSample\\src\\AuditLogger\\AL.Application\\AL.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pasin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\Projects\\GitHub Projects\\EntityFrameworkCoreAuditLogsSample\\src\\AuditLogger\\AL.Infrastructure\\AL.Infrastructure\\AL.Infrastructure.csproj": {
+                "projectPath": "E:\\Projects\\GitHub Projects\\EntityFrameworkCoreAuditLogsSample\\src\\AuditLogger\\AL.Infrastructure\\AL.Infrastructure\\AL.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -129,6 +205,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.16, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [

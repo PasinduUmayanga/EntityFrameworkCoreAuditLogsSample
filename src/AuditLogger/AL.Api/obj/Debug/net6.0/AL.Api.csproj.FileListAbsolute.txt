@@ -63,3 +63,11 @@ E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\A
 E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Api\bin\Debug\net6.0\AL.Infrastructure.dll
 E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Api\bin\Debug\net6.0\AL.Infrastructure.pdb
 E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Api\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Api\bin\Debug\net6.0\Newtonsoft.Json.dll
+E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Api\bin\Debug\net6.0\AL.Application.dll
+E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Api\bin\Debug\net6.0\AL.Application.pdb
+E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Api\bin\Debug\net6.0\Microsoft.OpenApi.dll
+E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Projects\GitHub Projects\EntityFrameworkCoreAuditLogsSample\src\AuditLogger\AL.Api\obj\Debug\net6.0\AL.Api.MvcApplicationPartsAssemblyInfo.cs
