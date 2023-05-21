@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using AL.Infrastructure.Audit;
+using Microsoft.Extensions.Options;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace AL.Infrastructure
 {
@@ -20,7 +22,10 @@ namespace AL.Infrastructure
             services.AddDbContextFactory<AuditLogDbContext>((sp,options) =>
             {
                 var auditableIntetceptor = sp.GetService<AuditableEntitiesInterceptor>();
-                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly(typeof(AuditLogDbContext).Assembly.FullName)).AddInterceptors(auditableIntetceptor); ;
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly(typeof(AuditLogDbContext).Assembly.FullName));//.AddInterceptors(auditableIntetceptor); ;
+
+                options.ConfigureWarnings(warnings => warnings.Ignore(CoreEventId.SaveChangesStarting));
+             
             });
             return services;
         }

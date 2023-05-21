@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.AccessControl;
+using AL.Infrastructure.Audit;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
+using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace AL.Infrastructure.Persistance.Models
@@ -27,6 +31,60 @@ namespace AL.Infrastructure.Persistance.Models
                 optionsBuilder.UseSqlServer("Name=DefaultConnection");
             }
         }
+        //public override int SaveChanges()
+        //{
+
+        //    try
+        //    {
+        //        var result = base.SaveChanges();
+
+        //        // Perform additional logic after SaveChanges
+        //        OnAfterSaveChanges();
+
+        //        return result;
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //        throw;
+        //    }
+        //    // Perform the original SaveChanges operation and get the result
+
+
+
+        //}
+
+        //public override int SaveChanges()
+        //{
+        //    var interceptor = new CustomSaveChangesInterceptor();
+        //    interceptor.BeforeSaveChanges(this);
+
+        //    var result = base.SaveChanges();
+
+        //    interceptor.AfterSaveChanges(this);
+        //    return result;
+        //}
+
+
+        protected virtual void OnAfterSaveChanges()
+        {
+            var modifiedEntities = ChangeTracker.Entries()
+                .Where(e => e.State == EntityState.Modified || e.State == EntityState.Added || e.State == EntityState.Deleted)
+                .Select(e => e.Entity)
+                .ToList();
+
+            foreach (var entity in modifiedEntities)
+            {
+                var tableName = entity.GetType().Name;
+                var action = ChangeTracker.Entries()
+                    .FirstOrDefault(e => e.Entity == entity)?.State.ToString();
+
+
+            }
+        }
+
+
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
