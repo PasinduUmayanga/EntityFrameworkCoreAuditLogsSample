@@ -15,7 +15,7 @@ namespace AL.Infrastructure.Helpers
         {
             return JsonConvert.SerializeObject(obj, new JsonSerializerSettings
             {
-                ContractResolver = new CamelCasePropertyNamesContractResolver(),
+                //ContractResolver = new CamelCasePropertyNamesContractResolver(),
                 NullValueHandling = NullValueHandling.Ignore,
                 Converters = new List<JsonConverter>
             {

@@ -16,9 +16,17 @@ namespace AL.Application.Repositories
                     _db.Students.Add(new Student()
                     {
                         ModifiedDate = DateTime.Now,
-                        ModifiedUser = "Test user",
+                        ModifiedUser = "Test",
                         Name = string.Format("user - {0}", i.ToString())
                     });
+
+                    Student student = _db.Students.FirstOrDefault(x => x.Id == 1);
+                    if (student != null)
+                    {
+                        student.Name = "test";
+                    }
+
+
                     _db.SaveChanges();
                 }
             }

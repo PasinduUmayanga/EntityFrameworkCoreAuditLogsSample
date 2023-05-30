@@ -31,7 +31,7 @@ namespace AL.Infrastructure.Audit
                 AuditType = TrailType,
                 TableName = TableName,
                 DateTime = DateTime.UtcNow,
-                PrimaryKey = _serializer.Serialize(KeyValues),
+                PrimaryKey = KeyValues.Count > 0 ? _serializer.Serialize(KeyValues) : string.Empty,
                 OldValues = OldValues.Count == 0 ? null : _serializer.Serialize(OldValues),
                 NewValues = NewValues.Count == 0 ? null : _serializer.Serialize(NewValues),
                 AffectedColumns = ChangedColumns.Count == 0 ? null : _serializer.Serialize(ChangedColumns)

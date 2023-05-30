@@ -16,13 +16,13 @@ namespace AL.Infrastructure
         public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
         {
 
-            services.AddScoped<ISerializerService, SerializerService>();
-            services.AddSingleton<AuditableEntitiesInterceptor>();
+            services.AddSingleton<ISerializerService, SerializerService>();
+            services.AddSingleton<AuditLogSaveChangesInterceptor>();
 
             services.AddDbContextFactory<AuditLogDbContext>((sp,options) =>
             {
-                var auditableIntetceptor = sp.GetService<AuditableEntitiesInterceptor>();
-                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly(typeof(AuditLogDbContext).Assembly.FullName));//.AddInterceptors(auditableIntetceptor); ;
+                var auditableIntetceptor = sp.GetService<AuditLogSaveChangesInterceptor>();
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly(typeof(AuditLogDbContext).Assembly.FullName)).AddInterceptors(auditableIntetceptor); ;
 
                 options.ConfigureWarnings(warnings => warnings.Ignore(CoreEventId.SaveChangesStarting));
              
