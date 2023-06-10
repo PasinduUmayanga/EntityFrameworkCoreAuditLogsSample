@@ -17,7 +17,7 @@
 05. Now you will see your created project under soluation explorer
 ![image](https://github.com/PasinduUmayanga/EntityFrameworkCoreAuditLogsSample/assets/21302583/84833136-0382-4817-ab29-c4a224fce7ec)
 
-06 Now Create New project for business layer Right click on Soluation->Add->New Project as below
+06. Now Create New project for business layer Right click on Soluation->Add->New Project as below
 ![image](https://github.com/PasinduUmayanga/EntityFrameworkCoreAuditLogsSample/assets/21302583/66c00edb-888f-4622-995d-12e2c239f093)
 
 07. Then select Class library That support .NET or .Net Standard and click on Next
@@ -28,6 +28,23 @@
 
 09. Select framework as .NET 6 and next
 ![image](https://github.com/PasinduUmayanga/EntityFrameworkCoreAuditLogsSample/assets/21302583/e7226d10-a6ae-44ef-8544-b622dd50ef9f)
+
+10. By Using 6,7,8,9 steps Create project name as `AL.Infrastructure`
+![image](https://github.com/PasinduUmayanga/EntityFrameworkCoreAuditLogsSample/assets/21302583/24671d52-180e-4c86-ae06-fc436331d55f)
+
+11. Expand Al.Infrastructure priject and right click on Dependencices as below you can Manage Nuget packages
+![image](https://github.com/PasinduUmayanga/EntityFrameworkCoreAuditLogsSample/assets/21302583/7f042170-b49a-4be4-9514-2b740dfaac95)
+
+12. Install Following Nuget packages
+`Microsoft.AspNetCore.Http.Abstractions`
+`Microsoft.EntityFrameworkCore`
+`Microsoft.EntityFrameworkCore.Design`
+`Microsoft.EntityFrameworkCore.SqlServer`
+`Microsoft.EntityFrameworkCore.Tools`
+`Newtonsoft.Json`
+![image](https://github.com/PasinduUmayanga/EntityFrameworkCoreAuditLogsSample/assets/21302583/b520dd79-5505-4f98-8e69-e776f2644165)
+
+
 
 
 
