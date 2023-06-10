@@ -36,12 +36,12 @@
 ![image](https://github.com/PasinduUmayanga/EntityFrameworkCoreAuditLogsSample/assets/21302583/7f042170-b49a-4be4-9514-2b740dfaac95)
 
 12. Install Following Nuget packages
-`Microsoft.AspNetCore.Http.Abstractions`
-`Microsoft.EntityFrameworkCore`
-`Microsoft.EntityFrameworkCore.Design`
-`Microsoft.EntityFrameworkCore.SqlServer`
-`Microsoft.EntityFrameworkCore.Tools`
-`Newtonsoft.Json`
+- `Microsoft.AspNetCore.Http.Abstractions`
+- `Microsoft.EntityFrameworkCore`
+- `Microsoft.EntityFrameworkCore.Design`
+- `Microsoft.EntityFrameworkCore.SqlServer`
+- `Microsoft.EntityFrameworkCore.Tools`
+- `Newtonsoft.Json`
 ![image](https://github.com/PasinduUmayanga/EntityFrameworkCoreAuditLogsSample/assets/21302583/b520dd79-5505-4f98-8e69-e776f2644165)
 
 
