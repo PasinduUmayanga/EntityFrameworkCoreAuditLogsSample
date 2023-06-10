@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Diagnostics;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace AL.Infrastructure.Audit
@@ -14,6 +13,8 @@ namespace AL.Infrastructure.Audit
         private readonly ISerializerService _serializer;
         private readonly IServiceScopeFactory _serviceScopeFactory;
         private string userName = "SYSTEM_USER";
+        private List<AuditTrail> auditTrailSaveList = new List<AuditTrail>();
+
 
 
         public AuditLogSaveChangesInterceptor(ISerializerService serializer, IServiceScopeFactory serviceScopeFactory)
@@ -65,7 +66,9 @@ namespace AL.Infrastructure.Audit
                         if (trailEntry != null)
                         {
                             AuditTrail auditTrailSave = trailEntry.ToAuditTrail();
-                            eventData.Context.Set<AuditTrail>().Add(auditTrailSave);
+                          //  eventData.Context.Set<AuditTrail>().Add(auditTrailSave);
+                            auditTrailSaveList.Add(auditTrailSave);
+
                         }
                     }
                 };
@@ -86,6 +89,31 @@ namespace AL.Infrastructure.Audit
             }
 
         }
+
+        public override int SavedChanges(SaveChangesCompletedEventData eventData, int result)
+        {
+            try
+            {
+                AuditLogDbContext dbContext = (AuditLogDbContext)eventData.Context!;
+                if (auditTrailSaveList.Count > 0)
+                {
+                    var auditTrailSaveDistinctList = auditTrailSaveList.DistinctBy(i => new { i.UserId, i.AuditType, i.TableName, i.PrimaryKey, i.OldValues, i.NewValues, i.AffectedColumns }).ToList();
+                    dbContext.AuditTrails.AddRange(auditTrailSaveDistinctList);
+                    auditTrailSaveList.Clear();
+                    dbContext.SaveChanges();
+
+                }
+
+                return result;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
+
         private void BeforeSaveChanges(AuditLogDbContext dbContext)
         {
             try
@@ -190,7 +218,9 @@ namespace AL.Infrastructure.Audit
                     AuditTrail auditTrailSave = trailEntry.ToAuditTrail();
                     if (!string.IsNullOrEmpty(auditTrailSave.PrimaryKey))
                     {
-                        dbContext.AuditTrails.Add(auditTrailSave);
+                      //  dbContext.AuditTrails.Add(auditTrailSave);
+                        auditTrailSaveList.Add(auditTrailSave);
+
                     }
 
 
