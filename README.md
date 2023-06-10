@@ -32,7 +32,7 @@
 10. By Using 6,7,8,9 steps Create project name as `AL.Infrastructure`
 ![image](https://github.com/PasinduUmayanga/EntityFrameworkCoreAuditLogsSample/assets/21302583/24671d52-180e-4c86-ae06-fc436331d55f)
 
-11. Expand Al.Infrastructure priject and right click on Dependencices as below you can Manage Nuget packages
+11. Expand Al.Infrastructure project and right click on Dependencices as below you can Manage Nuget packages
 ![image](https://github.com/PasinduUmayanga/EntityFrameworkCoreAuditLogsSample/assets/21302583/7f042170-b49a-4be4-9514-2b740dfaac95)
 
 12. Install Following Nuget packages
@@ -43,6 +43,12 @@
 - `Microsoft.EntityFrameworkCore.Tools`
 - `Newtonsoft.Json`
 ![image](https://github.com/PasinduUmayanga/EntityFrameworkCoreAuditLogsSample/assets/21302583/b520dd79-5505-4f98-8e69-e776f2644165)
+
+13. By using 11 step on `AL.Application` project Install Following Nuget packages
+-  `Microsoft.Extensions.Configuration.Abstractions`
+-  `Microsoft.Extensions.DependencyInjection.Abstractions`
+![image](https://github.com/PasinduUmayanga/EntityFrameworkCoreAuditLogsSample/assets/21302583/e5edb205-084f-4ed5-8f44-3bca578f26b1)
+
 
 
 
