@@ -1,8 +1,7 @@
-# ASP.NET Core database audit logs with Entity Framework Core
+# ASP.NET Core database audit logs with Entity Framework Core 6
 
-![image](https://github.com/PasinduUmayanga/Ocelot-Gateway-Sample/assets/21302583/1eee89a6-2df7-4091-82ef-4044398f9ae7)
+![image](https://github.com/PasinduUmayanga/EntityFrameworkCoreAuditLogsSample/assets/21302583/77f377f3-e6e7-4aea-b315-3536cb397238)
 
-![image](https://github.com/PasinduUmayanga/Ocelot-Gateway-Sample/assets/21302583/f3cb3b81-4bf0-41c9-882d-bbeea6b27e12)
 
 
  
