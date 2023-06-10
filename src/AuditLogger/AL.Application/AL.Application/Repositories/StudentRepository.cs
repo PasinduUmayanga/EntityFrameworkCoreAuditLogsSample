@@ -11,7 +11,7 @@ namespace AL.Application.Repositories
         {
             try
             {
-                for (int i = 0; i < 1; i++)
+                for (int i = 0; i < 1000; i++)
                 {
                     _db.Students.Add(new Student()
                     {
@@ -20,9 +20,10 @@ namespace AL.Application.Repositories
                         Name = string.Format("user - {0}", i.ToString())
                     });
 
-                    Student student = _db.Students.FirstOrDefault(x => x.Id == 1);
-                    if (student != null)
+                    Student student = _db.Students.FirstOrDefault(x => x.Id == i);
+                    if (student != null && i % 5 == 0)
                     {
+
                         student.Name = "test";
                     }
 
