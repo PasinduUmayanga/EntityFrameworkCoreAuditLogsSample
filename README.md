@@ -1,5 +1,9 @@
 # ASP.NET Core database audit logs with Entity Framework Core 6
 
+[![Build status](https://ci.appveyor.com/api/projects/status/puaa910410b37479?svg=true)](https://ci.appveyor.com/project/Mahadenamuththa/entityframeworkcoreauditlogssample)
+
+[![Build history](https://buildstats.info/appveyor/chart/Mahadenamuththa/entityframeworkcoreauditlogssample)](https://ci.appveyor.com/project/Mahadenamuththa/entityframeworkcoreauditlogssample/history)
+
 ![image](https://github.com/PasinduUmayanga/EntityFrameworkCoreAuditLogsSample/assets/21302583/77f377f3-e6e7-4aea-b315-3536cb397238)
 
 ## Create Project
