@@ -56,7 +56,7 @@
 14. Inside `AL.Infrastructure` create 3 folders Names of `Audi,Helpers,Persistance`
 ![image](https://github.com/PasinduUmayanga/EntityFrameworkCoreAuditLogsSample/assets/21302583/22024466-2ce5-4439-b6c1-e61ea919f863)
 
-15. Create  database name as `[AuditLogDB]` in SQL Microsoft Sql Server and create following tables as belows
+15. Create  database name as `[AuditLogDB]` in SQL Microsoft Sql Server and create following tables(`AuditType`,`AuditTrail`) as belows
 ```sql
 USE [AuditLogDB]
 GO
@@ -100,8 +100,18 @@ GO
 ALTER TABLE [dbo].[AuditTrail] CHECK CONSTRAINT [FK_AuditTrail_AuditType]
 GO
 ```
+16. Now in project go to `Tools`-> `Nuget Package Manager` -> Package Manager Console
+![image](https://github.com/PasinduUmayanga/EntityFrameworkCoreAuditLogsSample/assets/21302583/2fc37ab7-2bbc-49d9-920f-5e077ba8bb2e)
 
-20. Inside `AL.Infrastructure`->`Persistance`->`Models` create 
+17. In package manager console select default project as AL.Infrastructure And run `Scaffold-DbContext Name=DefaultConnection Microsoft.EntityFrameworkCore.SqlServer -Context AuditLogDbContext -OutputDir Persistance/Models -f`
+![image](https://github.com/PasinduUmayanga/EntityFrameworkCoreAuditLogsSample/assets/21302583/4158e2bd-2a61-4575-9476-e36bb545909d)
+
+18. After you run above command, In side `AL.Infrastructure` -> `Persistance` -> `Models` DbContext is created.
+![image](https://github.com/PasinduUmayanga/EntityFrameworkCoreAuditLogsSample/assets/21302583/8332f1c7-c102-4a8b-a796-7ad47ac70b8f)
+
+
+
+
 
 
 
