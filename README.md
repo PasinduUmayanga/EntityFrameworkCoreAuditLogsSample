@@ -53,6 +53,56 @@
 -  `Microsoft.Extensions.DependencyInjection.Abstractions`
 ![image](https://github.com/PasinduUmayanga/EntityFrameworkCoreAuditLogsSample/assets/21302583/e5edb205-084f-4ed5-8f44-3bca578f26b1)
 
+14. Inside `AL.Infrastructure` create 3 folders Names of `Audi,Helpers,Persistance`
+![image](https://github.com/PasinduUmayanga/EntityFrameworkCoreAuditLogsSample/assets/21302583/22024466-2ce5-4439-b6c1-e61ea919f863)
+
+15. Create  database name as `[AuditLogDB]` in SQL Microsoft Sql Server and create following tables as belows
+```sql
+USE [AuditLogDB]
+GO
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[AuditType](
+	[Id] [int] NOT NULL,
+	[AuditType] [nvarchar](50) NOT NULL,
+	[Description] [nvarchar](50) NULL,
+ CONSTRAINT [PK_Table_2] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+CREATE TABLE [dbo].[AuditTrail](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[UserId] [nvarchar](50) NULL,
+	[AuditType] [int] NOT NULL,
+	[TableName] [nvarchar](50) NULL,
+	[PrimaryKey] [nvarchar](max) NULL,
+	[OldValues] [nvarchar](max) NULL,
+	[NewValues] [nvarchar](max) NULL,
+	[AffectedColumns] [nvarchar](max) NULL,
+	[DateTime] [datetime] NULL,
+ CONSTRAINT [PK_AuditTrail] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[AuditTrail]  WITH CHECK ADD  CONSTRAINT [FK_AuditTrail_AuditType] FOREIGN KEY([AuditType])
+REFERENCES [dbo].[AuditType] ([Id])
+GO
+
+ALTER TABLE [dbo].[AuditTrail] CHECK CONSTRAINT [FK_AuditTrail_AuditType]
+GO
+```
+
+20. Inside `AL.Infrastructure`->`Persistance`->`Models` create 
+
 
 
 
