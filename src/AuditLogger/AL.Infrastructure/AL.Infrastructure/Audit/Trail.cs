@@ -1,5 +1,4 @@
-﻿
-using AL.Infrastructure.Helpers.Interfaces;
+﻿using AL.Infrastructure.Helpers.Interfaces;
 using AL.Infrastructure.Persistance.Models;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 

@@ -1,7 +1,6 @@
 ﻿using AL.Infrastructure.Helpers.Interfaces;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Serialization;
 namespace AL.Infrastructure.Helpers
 {
     public class SerializerService : ISerializerService
@@ -15,7 +14,6 @@ namespace AL.Infrastructure.Helpers
         {
             return JsonConvert.SerializeObject(obj, new JsonSerializerSettings
             {
-                //ContractResolver = new CamelCasePropertyNamesContractResolver(),
                 NullValueHandling = NullValueHandling.Ignore,
                 Converters = new List<JsonConverter>
             {

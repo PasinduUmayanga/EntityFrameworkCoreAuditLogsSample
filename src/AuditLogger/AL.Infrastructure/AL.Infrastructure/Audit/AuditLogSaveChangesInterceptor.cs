@@ -15,8 +15,6 @@ namespace AL.Infrastructure.Audit
         private string userName = "SYSTEM_USER";
         private List<AuditTrail> auditTrailSaveList = new List<AuditTrail>();
 
-
-
         public AuditLogSaveChangesInterceptor(ISerializerService serializer, IServiceScopeFactory serviceScopeFactory)
         {
             _serializer = serializer;
@@ -42,7 +40,6 @@ namespace AL.Infrastructure.Audit
 
         public override InterceptionResult<int> SavingChanges(DbContextEventData eventData, InterceptionResult<int> result)
         {
-
             try
             {
                 SetUserName();
@@ -66,15 +63,11 @@ namespace AL.Infrastructure.Audit
                         if (trailEntry != null)
                         {
                             AuditTrail auditTrailSave = trailEntry.ToAuditTrail();
-                          //  eventData.Context.Set<AuditTrail>().Add(auditTrailSave);
                             auditTrailSaveList.Add(auditTrailSave);
-
                         }
                     }
                 };
-
                 return result;
-
             }
             catch (Exception)
             {
@@ -87,7 +80,6 @@ namespace AL.Infrastructure.Audit
                 {
                 };
             }
-
         }
 
         public override int SavedChanges(SaveChangesCompletedEventData eventData, int result)
@@ -103,9 +95,7 @@ namespace AL.Infrastructure.Audit
                     dbContext.SaveChanges();
 
                 }
-
                 return result;
-
             }
             catch (Exception)
             {
@@ -113,7 +103,6 @@ namespace AL.Infrastructure.Audit
             }
 
         }
-
         private void BeforeSaveChanges(AuditLogDbContext dbContext)
         {
             try
@@ -153,7 +142,6 @@ namespace AL.Infrastructure.Audit
                 for (int i = 0; i < entries.Count; i++)
                 {
                     EntityEntry entry = entries[i];
-
 
                     var trailEntry = new Trail(entry, _serializer)
                     {
@@ -214,16 +202,11 @@ namespace AL.Infrastructure.Audit
                         }
                     }
 
-
                     AuditTrail auditTrailSave = trailEntry.ToAuditTrail();
                     if (!string.IsNullOrEmpty(auditTrailSave.PrimaryKey))
                     {
-                      //  dbContext.AuditTrails.Add(auditTrailSave);
                         auditTrailSaveList.Add(auditTrailSave);
-
                     }
-
-
                 }
             }
             catch (Exception ex)
