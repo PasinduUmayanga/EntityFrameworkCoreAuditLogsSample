@@ -76,9 +76,9 @@ namespace AL.Infrastructure.Audit
             finally
             {
                 // Unsubscribe from the StateChanged event
-                eventData.Context.ChangeTracker.StateChanged -= (s, e) =>
-                {
-                };
+                //eventData.Context.ChangeTracker.StateChanged -= (s, e) =>
+                //{
+                //};
 
             }
         }
