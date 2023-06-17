@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SxLyzHqlmfI19Uc4lnBPc7dK2XtBnLlzSzbyWA6QmU1CNibWigYsmu3bxDZGjS+UJT4hlHRfQV2IRGM+LX+7KQ==",
+  "dgSpecHash": "svRDMD/yQWdplCRiUHwlyz7kYXrwVwlw6ZPD2/OzrJ05s2TpZJTU2G7EXQwuDDrud4y2agrFvorNJCMXik+vww==",
   "success": true,
   "projectFilePath": "E:\\Projects\\GitHub Projects\\EntityFrameworkCoreAuditLogsSample\\src\\AuditLogger\\AL.Infrastructure\\AL.Infrastructure\\AL.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -12,7 +12,7 @@
     "C:\\Users\\pasin\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\pasin\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.16\\microsoft.entityframeworkcore.6.0.16.nupkg.sha512",
     "C:\\Users\\pasin\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.16\\microsoft.entityframeworkcore.abstractions.6.0.16.nupkg.sha512",
-    "C:\\Users\\pasin\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.16\\microsoft.entityframeworkcore.analyzers.6.0.16.nupkg.sha512",
+    "C:\\Users\\pasin\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.18\\microsoft.entityframeworkcore.analyzers.6.0.18.nupkg.sha512",
     "C:\\Users\\pasin\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.16\\microsoft.entityframeworkcore.design.6.0.16.nupkg.sha512",
     "C:\\Users\\pasin\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.16\\microsoft.entityframeworkcore.relational.6.0.16.nupkg.sha512",
     "C:\\Users\\pasin\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.16\\microsoft.entityframeworkcore.sqlserver.6.0.16.nupkg.sha512",

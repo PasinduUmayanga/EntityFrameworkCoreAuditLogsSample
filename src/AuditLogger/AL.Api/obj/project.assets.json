@@ -151,7 +151,7 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/6.0.16": {
+      "Microsoft.EntityFrameworkCore.Analyzers/6.0.18": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/_._": {}
@@ -922,6 +922,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "AL.Infrastructure": "1.0.0",
+          "Microsoft.EntityFrameworkCore.Analyzers": "6.0.18",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
         },
@@ -938,6 +939,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.EntityFrameworkCore": "6.0.16",
+          "Microsoft.EntityFrameworkCore.Analyzers": "6.0.18",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.16",
           "Newtonsoft.Json": "13.0.3"
         },
@@ -1177,17 +1179,17 @@
         "microsoft.entityframeworkcore.abstractions.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/6.0.16": {
-      "sha512": "gN2yqqz2R6jj80SUTc036cPPM6xv3e/T1qpQI8ZfWJG3hXjcISI93uZtnyLVpn1712SklQR1WMIZ/bGYUurjcA==",
+    "Microsoft.EntityFrameworkCore.Analyzers/6.0.18": {
+      "sha512": "XWCVI7KXaf+3FR3bKezmUm/kuY/5HPVdkuc4PTtT4HBTLbAX1oxH5N/aBmdqJM1j9jIszM/ZsjBlg/nVeqE1Lw==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.analyzers/6.0.16",
+      "path": "microsoft.entityframeworkcore.analyzers/6.0.18",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "analyzers/dotnet/cs/Microsoft.EntityFrameworkCore.Analyzers.dll",
         "lib/netstandard2.0/_._",
-        "microsoft.entityframeworkcore.analyzers.6.0.16.nupkg.sha512",
+        "microsoft.entityframeworkcore.analyzers.6.0.18.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
@@ -2572,6 +2574,7 @@
     "net6.0": [
       "AL.Application >= 1.0.0",
       "AL.Infrastructure >= 1.0.0",
+      "Microsoft.EntityFrameworkCore.Analyzers >= 6.0.18",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.16",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
@@ -2622,6 +2625,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.Analyzers": {
+            "target": "Package",
+            "version": "[6.0.18, )"
+          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
