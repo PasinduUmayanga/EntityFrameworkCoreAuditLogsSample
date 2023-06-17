@@ -73,13 +73,13 @@ namespace AL.Infrastructure.Audit
             {
                 throw;
             }
-            //finally
-            //{
-            //    // Unsubscribe from the StateChanged event
-            //    eventData.Context.ChangeTracker.StateChanged -= (s, e) =>
-            //    {
-            //    };
-            //}
+            finally
+            {
+                // Unsubscribe from the StateChanged event
+                eventData.Context.ChangeTracker.StateChanged -= (s, e) =>
+                {
+                };
+            }
         }
 
         public override int SavedChanges(SaveChangesCompletedEventData eventData, int result)
