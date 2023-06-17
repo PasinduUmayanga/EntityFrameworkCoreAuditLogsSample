@@ -1,5 +1,12 @@
 # ASP.NET Core database audit logs with Entity Framework Core 6
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=PasinduUmayanga_EntityFrameworkCoreAuditLogsSample&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=PasinduUmayanga_EntityFrameworkCoreAuditLogsSample)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=PasinduUmayanga_EntityFrameworkCoreAuditLogsSample&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=PasinduUmayanga_EntityFrameworkCoreAuditLogsSample)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=PasinduUmayanga_EntityFrameworkCoreAuditLogsSample&metric=bugs)](https://sonarcloud.io/summary/new_code?id=PasinduUmayanga_EntityFrameworkCoreAuditLogsSample)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=PasinduUmayanga_EntityFrameworkCoreAuditLogsSample&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=PasinduUmayanga_EntityFrameworkCoreAuditLogsSample)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=PasinduUmayanga_EntityFrameworkCoreAuditLogsSample&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=PasinduUmayanga_EntityFrameworkCoreAuditLogsSample)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=PasinduUmayanga_EntityFrameworkCoreAuditLogsSample&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=PasinduUmayanga_EntityFrameworkCoreAuditLogsSample)
+
 [![Build status](https://ci.appveyor.com/api/projects/status/puaa910410b37479?svg=true)](https://ci.appveyor.com/project/Mahadenamuththa/entityframeworkcoreauditlogssample)
 
 [![Build history](https://buildstats.info/appveyor/chart/Mahadenamuththa/entityframeworkcoreauditlogssample)](https://ci.appveyor.com/project/Mahadenamuththa/entityframeworkcoreauditlogssample/history)
