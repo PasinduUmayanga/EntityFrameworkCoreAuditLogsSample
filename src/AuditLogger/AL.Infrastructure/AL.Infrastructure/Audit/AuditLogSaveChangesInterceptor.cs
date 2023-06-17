@@ -79,6 +79,7 @@ namespace AL.Infrastructure.Audit
                 eventData.Context.ChangeTracker.StateChanged -= (s, e) =>
                 {
                 };
+
             }
         }
 
